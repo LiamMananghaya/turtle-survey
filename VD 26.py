@@ -27,8 +27,7 @@ if st.session_state.step == 1:
 # Q2
 elif st.session_state.step == 2:
     location = st.text_input(
-        "Where do you think your favorite species of penguins are commonly located?",
-        ["Yes", "No", "Not sure"]
+        "Where do you think your favorite species of penguins are commonly located?"
     )
 
     if st.button("Next"):
