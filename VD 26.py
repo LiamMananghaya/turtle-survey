@@ -247,7 +247,7 @@ elif st.session_state.step == 18:
     )
 
     # Initialize session state for current image
-    if "penguin" not in st.session_state:
+    if "curr_img" not in st.session_state:
         st.session_state.curr_img = "penguin1.png"
 
 # Show the current image, centered
@@ -277,6 +277,7 @@ elif st.session_state.step == 19:
     st.write("What are birds classified as?", st.session_state.classification)
     st.write("What do penguins primarily eat?", st.session_state.food)
     st.write("Do all penguins live in warm climates?", st.session_state.climate)
+
 
 
 
