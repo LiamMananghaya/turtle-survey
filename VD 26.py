@@ -1,4 +1,5 @@
 import streamlit as st
+import base64
 
 st.title("Annual UMMBGB Survey")
 
@@ -228,11 +229,22 @@ elif st.session_state.step == 17:
 # Q17
 elif st.session_state.step == 18:
 
-    # audio
-    audio_file = open("earnedit.mp3", "rb")
-    audio_bytes = audio_file.read()
+    # Load audio file
+    with open("earnedit.mp3", "rb") as f:
+        audio_bytes = f.read()
 
-    st.audio(audio_bytes, format="audio/mp3", autoplay = True)
+    # Convert to base64
+    audio_base64 = base64.b64encode(audio_bytes).decode()
+
+    # Hidden audio player (no progress bar)
+    st.markdown(
+        f"""
+        <audio autoplay>
+            <source src="data:audio/mp3;base64,{audio_base64}" type="audio/mp3">
+        </audio>
+        """,
+        unsafe_allow_html=True
+    )
 
     valentine = st.selectbox(
         "Will you be Liam Mananghaya's valentine?",
