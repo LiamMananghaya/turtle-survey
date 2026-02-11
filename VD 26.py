@@ -284,7 +284,6 @@ elif st.session_state.step == 18:
         st.write(st.session_state.message)
         
     if st.button("Next"):
-        st.session_state.valentine = valentine
         st.session_state.step = 19
         st.rerun()
 
@@ -292,6 +291,7 @@ elif st.session_state.step == 18:
 elif st.session_state.step == 19:
     st.success("You have reached the end of the survey.")
     st.write("On behalf of the Myka is So Pretty Society- I mean, the Major Search for Penguins Society, thank you for taking the time to answer our questions!")
+
 
 
 
