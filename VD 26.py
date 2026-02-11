@@ -154,7 +154,6 @@ elif st.session_state.step == 11:
         else:
             finalFlightAnswer = flight
 
-    if st.button("Next", key = "main_next"):
         st.session_state.flight = finalFlightAnswer
         st.session_state.step = 12
         st.rerun()
@@ -248,5 +247,6 @@ elif st.session_state.step == 19:
     st.write("What are birds classified as?", st.session_state.classification)
     st.write("What do penguins primarily eat?", st.session_state.food)
     st.write("Do all penguins live in warm climates?", st.session_state.climate)
+
 
 
