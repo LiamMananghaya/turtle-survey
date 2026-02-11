@@ -246,7 +246,7 @@ elif st.session_state.step == 18:
         unsafe_allow_html=True
     )
 
-    st.image("penguin1.png")
+    st.image("penguin1.png", width = 200)
 
     valentine = st.selectbox(
         "Will you be Liam Mananghaya's valentine?",
@@ -266,5 +266,6 @@ elif st.session_state.step == 19:
     st.write("What are birds classified as?", st.session_state.classification)
     st.write("What do penguins primarily eat?", st.session_state.food)
     st.write("Do all penguins live in warm climates?", st.session_state.climate)
+
 
 
