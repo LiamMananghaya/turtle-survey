@@ -1,15 +1,7 @@
 import streamlit as st
 import base64
 
-def answer_yes():
-    st.session_state.curr_img = "penguinhappy.jpg"
-    st.session_state.answered = True
-
-def answer_no():
-    st.session_state.curr_img = "penguinangry.jpg"
-    st.session_state.answered = True
-
-st.title("Annual UMMBGB Survey")
+st.title("The Major Search for Penguins Society (MSPS) Survey 2026")
 
 if "step" not in st.session_state: 
     st.session_state.step = 1 # initializes to start page count
@@ -291,6 +283,7 @@ elif st.session_state.step == 18:
 elif st.session_state.step == 19:
     st.success("You have reached the end of the survey.")
     st.write("On behalf of the Myka is So Pretty Society- I mean, the Major Search for Penguins Society, thank you for taking the time to answer our questions!")
+
 
 
 
