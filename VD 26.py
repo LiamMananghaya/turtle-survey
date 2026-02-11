@@ -246,25 +246,23 @@ elif st.session_state.step == 18:
         unsafe_allow_html=True
     )
 
+    # Initialize session state for current image
+    if "penguin" not in st.session_state:
+        st.session_state.penguin = "penguin1.png"
+
+# Show the current image, centered
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
-        st.image("penguin1.png", width=400)
+        st.image(st.session_state.penguin, width=400)
 
     st.write("Will you be Liam Mananghaya's valentine?")
 
     if st.button("Yes"):
-        with col2:
-            st.image("penguinhappy.jpg", width=400)
-
-        valentine = "Yes"
+        st.session_state.current_image = "penguinhappy.jpg"
 
     if st.button("No"):
+        st.session_state.current_image = "penguinangry.jpg"
         st.write("Think again.")
-        
-        with col2:
-            st.image("penguinangry.jpg", width=400)
-        
-        valentine = "No"
 
     if st.button("Next"):
         st.session_state.valentine = valentine
@@ -279,6 +277,7 @@ elif st.session_state.step == 19:
     st.write("What are birds classified as?", st.session_state.classification)
     st.write("What do penguins primarily eat?", st.session_state.food)
     st.write("Do all penguins live in warm climates?", st.session_state.climate)
+
 
 
 
