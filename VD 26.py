@@ -254,7 +254,7 @@ elif st.session_state.step == 18:
 
     if st.button("Yes"):
         with col2:
-            st.image("penguinhappy.png", width=400)
+            st.image("penguinhappy.jpg", width=400)
 
         valentine = "Yes"
 
@@ -262,7 +262,7 @@ elif st.session_state.step == 18:
         st.write("Think again.")
         
         with col2:
-            st.image("penguinangry.png", width=400)
+            st.image("penguinangry.jpg", width=400)
         
         valentine = "No"
 
@@ -279,6 +279,7 @@ elif st.session_state.step == 19:
     st.write("What are birds classified as?", st.session_state.classification)
     st.write("What do penguins primarily eat?", st.session_state.food)
     st.write("Do all penguins live in warm climates?", st.session_state.climate)
+
 
 
 
