@@ -250,10 +250,21 @@ elif st.session_state.step == 18:
     with col2:
         st.image("penguin1.png", width=400)
 
-    valentine = st.selectbox(
-        "Will you be Liam Mananghaya's valentine?",
-        ["Yes", "No"]
-    )
+    st.write("Will you be Liam Mananghaya's valentine?")
+
+    if st.button("Yes"):
+        with col2:
+            st.image("penguinhappy.png", width=400)
+
+        valentine = "Yes"
+
+    if st.button("No"):
+        st.write("Think again.")
+        
+        with col2:
+            st.image("penguinangry.png", width=400)
+        
+        valentine = "No"
 
     if st.button("Next"):
         st.session_state.valentine = valentine
@@ -268,7 +279,6 @@ elif st.session_state.step == 19:
     st.write("What are birds classified as?", st.session_state.classification)
     st.write("What do penguins primarily eat?", st.session_state.food)
     st.write("Do all penguins live in warm climates?", st.session_state.climate)
-
 
 
 
