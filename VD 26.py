@@ -1,6 +1,12 @@
 import streamlit as st
 import base64
 
+st.markdown("""
+<style>
+footer {visibility: hidden;}
+</style>
+""", unsafe_allow_html=True)
+
 st.title("The Major Search for Penguins Society (MSPS) Survey 2026")
 
 if "step" not in st.session_state: 
@@ -283,6 +289,7 @@ elif st.session_state.step == 18:
 elif st.session_state.step == 19:
     st.success("You have reached the end of the survey.")
     st.write("On behalf of the Myka is So Pretty Society- I mean, the Major Search for Penguins Society, thank you for taking the time to answer our questions!")
+
 
 
 
